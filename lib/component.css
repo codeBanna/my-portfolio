@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #2d3748;
+    
+}
+
+.Container{
+    max-width: 1200px;
+    display: block;
+    margin: 5px auto;
+}
+
+#profileImg{
+    width: 200px;
+    border-radius: 50%;
+    border: 40px solid white;
+}
+
+/* .Container img
+    margin: auto;
+    border-radius: 50%;
+    border: 40px solid white;
+} */
+
+#profileImg img:hover{
+    /* border: 10px solid white;
+    transition: all .3s ease; */
+}
