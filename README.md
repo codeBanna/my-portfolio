@@ -6,5 +6,5 @@ Thank you for visiting!
 
 So far, I know:
 1. HTML
-2. CSS
-3. JS
+2. CSS - Tailwind
+3. JS - jQuery
