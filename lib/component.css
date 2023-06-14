@@ -1,78 +1,215 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-color: #2d3748;
     --secondary-color: #3d485b;
-    
 }
 
-.container{
-    max-width: 1200px;
+/* utility classes */
+.link-primary {
+    max-width: 140px;
     display: block;
-    margin: 0 auto;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin: 1rem auto 0 auto;
+    border-radius: 2rem;
 }
 
-#profileImg{
-    width: 200px;
-    border-radius: 50%;
-    border: 40px solid white;
+.link-secondary {
+    max-width: 140px;
+    display: block;
+    margin: 1rem auto 0 auto;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
-.heroImage{
+.section {
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+/* navbar */
+.projectDD {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.container {
+    /* max-width: 1200px; */
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    color: var(--primary-color);
+}
+
+.container p {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+/* header */
+.title {
+    margin: 3rem auto;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.title h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.heroImage {
     max-width: 70%;
     min-height: 200px;
     display: block;
     margin: auto;
 }
 
-.title{
-    margin: 3rem auto;
-}
-.title h1{
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.title h4{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.intro{
+.intro {
     display: flex;
     min-height: 15rem;
     background-color: whitesmoke;
+    margin-bottom: 3rem;
 }
-.intro .para{
-    /* border: 2px solid red; */
+
+.intro .para {
     width: 80%;
-    color: var(--primary-color);
     font-size: medium;
     font-weight: 400;
-    padding: 1rem 0 1rem 10rem;
+    padding: 1rem 0 1rem 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
-.intro .avatar{
-    /* border: 2px solid green; */
+
+.intro .avatar {
     display: flex;
     width: 30%;
     align-items: center;
     justify-content: flex-start;
     padding: 3rem;
 }
-.intro .avatar img{
-    width: 136px;
 
+.intro .avatar img {
+    width: 136px;
+}
+
+.projects {
+    background-color: whitesmoke;
+    border-radius: 2em;
+}
+
+i {
+    margin: 0.5em;
+}
+
+footer {
+    margin-top: 2em;
+    display: flex;
+    padding: 2em;
+    min-height: 5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    justify-content: space-evenly;
+}
+
+footer h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+footer .socialIcons i {
+    font-size: 2em;
+}
+
+
+
+/* media quesries */
+@media screen and (max-width: 1024px) {
+    .intro .para {
+        padding: 1rem 0 1rem 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .title h4 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .intro .para {
+        padding: 1rem 0 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-width: 320px) {
+    .title {
+        margin: 2rem auto;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .title h4 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .heroImage {
+        min-height: 120px;
+    }
+
+    .intro {
+        flex-direction: column-reverse;
+    }
+
+    .intro .para {
+        width: 100%;
+        padding: 0 2em 2em 2em
+    }
+
+    .intro .avatar {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro .avatar img {
+        width: 50px;
+        margin-top: 1em;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer h4 {
+        margin-top: 1em;
+    }
 }
