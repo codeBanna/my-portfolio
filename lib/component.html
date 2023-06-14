@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/lib/component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/lib/component.js"></script>
-    <title>Shubhampal | Portfolio</title>
+    <title>title | Portfolio</title>
 
 </head>
 
@@ -48,7 +49,7 @@
                                         class="menuDD inline-flex justify-center rounded-md px-3 py-2 text-sm font-medium text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-700 hover:text-white"
                                         id="menu-button" aria-expanded="true" aria-haspopup="true">
                                         Projects
-                                        <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                        <svg class="ml-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
                                             aria-hidden="true">
                                             <path fill-rule="evenodd"
                                                 d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
@@ -56,15 +57,16 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <div class="projectDD absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                <!-- project dropdown -->
+                                <div class="projectDD absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md shadow-lg ring-1 focus:outline-none"
                                     role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                                     <div class="py-1" role="none">
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
-                                            tabindex="-1" id="menu-item-0">Account settings</a>
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
-                                            tabindex="-1" id="menu-item-1">Support</a>
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
-                                            tabindex="-1" id="menu-item-2">License</a>
+                                        <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                            id="menu-item-0">Account settings</a>
+                                        <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                            id="menu-item-1">Support</a>
+                                        <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                                            id="menu-item-2">License</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,8 +74,8 @@
                     </div>
                 </div>
                 <div>
-                    <img class="h-8 w-8 rounded-full" src="/images/MicrosoftTeams-image-18-e1685619654498.jpg"
-                        alt="Shubhampal">
+                    <img class="profileSlider h-8 w-8 rounded-full"
+                        src="/images/MicrosoftTeams-image-18-e1685619654498.jpg" alt="Shubhampal">
                 </div>
             </div>
         </div>
@@ -94,7 +96,6 @@
     </nav>
 
     <header>
-        
         <div class="title">
             <h1>Frontend Developer Portfolio</h1>
             <h4>I code beautifully simple things, and I love what I do.</h4>
@@ -104,22 +105,49 @@
                 <img src="/images/heroImage.svg" alt="heroImage">
             </div>
         </div>
-    </header>
-
-    <section class="intro">
+        <div class="intro">
             <div class="para">
                 <p>Hi there, I'm Shubhampal&#128075; I'm passionate developer who enjoys learning new things every day.
                     I love meeting new people and working in a team environment. Although I started recently in 2023, I
                     hope to become really good one day!&#128512</p>
-                <p class="my-2">One thing I love about coding the most is that the journey of learning never ends! I am always
+                <p class="my-2">One thing I love about coding the most is that the journey of learning never ends! I am
+                    always
                     seeking new challenges and opportunities to improve my skills.</p>
             </div>
             <div class="avatar">
                 <img src="/images/avatar.svg" alt="avatar">
             </div>
-    </section>
-    <footer>
+        </div>
+    </header>
 
+    <section class="technologies container section">
+        <h1>Technologies</h1>
+        <p>I'm familiar with HTML, CSS, JavaScript, Git and Web Hosting</p>
+    </section>
+    <section class="projects container section">
+        <h1>Projects</h1>
+        <p>I like to showcase my work and thus, you can see my projects hosted online</p>
+        <a class="link-primary" href="#">See Projects</a>
+    </section>
+    <section class="blogs container section">
+        <h1>Blogs</h1>
+        <p>I am also working on some technical and non techincal blogs. I like to document my journey of learning.</p>
+        <a class="link-secondary" href="#">Read Blogs</a>
+    </section>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact Details</h4>
+            <h3><i class="fa-solid fa-envelope"></i> shaktawat6625@gmail.com</h3>
+            <h3><i class="fa-solid fa-mobile-button"></i>+91 8619419180</h3>
+        </div>
+        <div class="socialIcons">
+            <h4>Social Media</h4>
+            <div>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
