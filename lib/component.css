@@ -49,6 +49,10 @@
     text-align: center;
 }
 
+.container input {
+    border: 1px solid greenyellow;
+}
+
 .container h1 {
     font-size: 1.5em;
     font-weight: bold;
@@ -141,6 +145,21 @@ footer h4 {
 
 footer .socialIcons i {
     font-size: 2em;
+}
+
+.answerArea{
+    display: flex;
+    /* margin: 6px 0px; */
+    /* align-items: center; */
+    justify-content: center;
+}
+.answerItem{
+    margin: 30px 10px;
+}
+
+.playArea{
+    background-color: rgb(215, 251, 162);
+    padding: 15px;
 }
 
 
