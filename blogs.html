@@ -3,15 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/lib/component.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/lib/component.js"></script>
-    <title>title | Portfolio</title>
 
+    <title>title | Blogs</title>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
                         <div class="flex space-x-4">
                             <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                                 aria-current="page">Home</a>
-                            <a href="/blogs.html"
+                            <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blogs</a>
                             <!-- <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a> -->
@@ -95,47 +94,47 @@
         </div>
     </nav>
 
-    <header>
-        <div class="title">
-            <h1>Frontend Developer Portfolio</h1>
-            <h4>I code beautifully simple things, and I love what I do.</h4>
-        </div>
-        <div class="container">
-            <div class="heroImage">
-                <img src="/images/heroImage.svg" alt="heroImage">
-            </div>
-        </div>
-        <div class="intro">
-            <div class="para">
-                <p>Hi there, I'm Shubhampal&#128075; I'm passionate developer who enjoys learning new things every day.
-                    I love meeting new people and working in a team environment. Although I started recently in 2023, I
-                    hope to become really good one day!&#128512</p>
-                <p class="my-2">One thing I love about coding the most is that the journey of learning never ends! I am
-                    always
-                    seeking new challenges and opportunities to improve my skills.</p>
-            </div>
-            <div class="avatar">
-                <img src="/images/avatar.svg" alt="avatar">
-            </div>
-        </div>
-    </header>
+    <div class="container">
+        <img src="images/coming soon.jpg" alt="coming soon" style="width: 40vw; margin: 13px auto;">
+    </div>
 
-    <section class="technologies container section">
-        <h1>Technologies</h1>
-        <p>I'm familiar with HTML, CSS, JavaScript, Git and Web Hosting</p>
-    </section>
+    <div class="container">
+        <h1 class="title" style="color: greenyellow; background: #000;">Quick Game <small style="color: hotpink;">(Built
+                with JS)</small> </h1>
+        <p>Guess number between 0 - 9, if you guess the correct number, You win <strong
+                style="color: hotpink;">$500!!</strong></p>
+        <hr>
 
-    <section class="projects container section">                     <!--   with primary link -->
-        <h1>Projects</h1>
-        <p>I like to showcase my work and thus, you can see my projects hosted online</p>
-        <a class="link-primary" href="#">See Projects</a>
-    </section>
+        <div class="my-3 playArea">
+            <label for="userInput" required><b>Enter Your number: </b></label>
+            <input type="number" id="userInput" class="p-1">
 
-    <section class="blogs container section">                        <!--   with secondary link -->
-        <h1>Blogs</h1>
-        <p>I am also working on some technical and non techincal blogs. I like to document my journey of learning.</p>
-        <a class="link-secondary" href="#">Read Blogs</a>
-    </section>
+            <button class="link-primary" id="check">CHECK</button>
+
+            <div class="answerItem">
+                <span class="checkAnswer"></span>
+            </div>
+
+            <!-- <div class="answerItem">
+                <span><b>Remaining Guesses: </b></span>
+                <span class="guessRemaing"></span>
+            </div> -->
+
+            <div class="answerItem">
+                <span><b>Correct Number is: </b></span>
+                <span class="correctAnswer"></span>
+            </div>
+
+            <div class="answerItem">
+                <span class="gameOver"></span>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
 
     <footer>
         <div class="contact">
@@ -151,7 +150,51 @@
             </div>
         </div>
     </footer>
+    <script>
+        
+        
+        // console.log(num)
+        let userInput = document.querySelector('#userInput');
+        let check = document.getElementById('check');
+        let guessRemaing = document.querySelector('.guessRemaing');
+        let checkAnswer = document.querySelector('.checkAnswer');
+        let correctAnswer = document.querySelector('.correctAnswer')
+        let gameOver = document.querySelector('.gameOver')
 
+
+        check.addEventListener("click", checkNumber);
+        function checkNumber() {
+            let num = Number.parseInt(Math.random() * 10)
+            let chance = 3;
+            for (i = 1; i <= 3; i++) {
+                if (num == userInput.value) {
+
+                    checkAnswer.innerText = ("Congratulations!! You won $500");
+                    correctAnswer.innerText = ("Correct Number is: ", num);
+                    gameOver.innerText = ("Game Over");
+                    break;
+                } else if (num > userInput.value) {
+
+                    checkAnswer.innerText = ("Sorry, Wrong Guess! Try Again.");
+                    // chance--
+
+                    // guessRemaing.innerText = ("Remaining Guesses: ", chance);
+                } else {
+
+                    checkAnswer.innerText = ("Sorry, Wrong Guess! Try Again.");
+
+                    // chance--
+                    // guessRemaing.innerText = ("Remaining Guesses: ", chance);
+
+                }
+                // console.log(chance)
+                correctAnswer.innerText = ("Correct Number is: ", num);
+                // gameOver.innerText = ("Game Over");
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
